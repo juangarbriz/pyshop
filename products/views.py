@@ -11,5 +11,6 @@ def index(request):
 def new(request):
     return HttpResponse("mis cojones nuevos")
 
-
+def inicio(request):
+    return render(request,"inicio.html")
 
