@@ -11,6 +11,11 @@ def index(request):
 def new(request):
     return HttpResponse("mis cojones nuevos")
 
+
 def inicio(request):
     return render(request,"inicio.html")
 
+
+def detail(request,product_id):
+    products = Product.objects.get(id=product_id)
+    return render(request, "detail.html", {"products": products})
